@@ -3,21 +3,6 @@
   padding: 0px;
 }
 
-h1 {
-  color: aquamarine;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-right {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px;
-}
-
 li {
   list-style: none;
 }
