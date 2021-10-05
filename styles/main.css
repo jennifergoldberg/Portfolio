@@ -50,6 +50,10 @@ body {
   line-height: 1.6;
 }
 
+section {
+  padding: 5em 2em;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -76,9 +80,40 @@ h3 {
   font-size: var(--fs-h3);
 }
 
+.section__prevtitle {
+  margin: .25em;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-reg);
+}
+
+.section__title {
+  margin-bottom: .25em;
+}
+
+.section__title--hero {
+  font-weight: var(--fw-bold);
+}
+
+.section__title--name {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--hero, .section__subtitle--about {
+  background: var(--color-accent);
+  font-family: var(--ff-secondary);
+}
 
 
+/* Hero Section */
 
+.hero {
+  position: relative;
+}
 
 li {
   list-style: none;
