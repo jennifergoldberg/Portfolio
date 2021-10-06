@@ -257,6 +257,28 @@ header {
   }
 }
 
+/* Scroll to Top Btn */
+.scroll-to-top {
+  position: fixed;
+  bottom: 3em;
+  right: 1em;
+  z-index: 200;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+  background-color: var(--color-dark);
+  border: none;
+}
+
+.show-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#scroll__arrow {
+  color: var(--color-light);
+}
+
 /* Tech */
 .tech-list {
   display: flex;
