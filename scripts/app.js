@@ -1,4 +1,6 @@
-document.getElementById("btn").addEventListener("click", function click(){
-  console.log("clicked");
-})
+const navToggle = document.querySelector('.nav-toggle');
+
+navToggle.addEventListener('click', () => {
+  document.body.classList.toggle('nav-open');
+});
 
