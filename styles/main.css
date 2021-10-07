@@ -113,7 +113,6 @@ h3 {
 }
 
 .section__subtitle--hero, .section__subtitle--about {
-  background: var(--color-accent);
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
 }
@@ -126,8 +125,9 @@ header {
   padding: 1em;
 }
 
-.logo {
-  max-width: 100px;
+.logo img {
+  max-width: 250px;
+  box-shadow: 0 0px 0px rgba(0 0 0 / 0.3);;
 }
 
 .nav {
@@ -235,23 +235,25 @@ header {
   position: relative;
 }
 
-@media (min-width: 600px) {
+.section__title--hero {
+  background-image: linear-gradient(90deg, #e3ffe7, #d9e7ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section__prevtitle {
+  font-family: var(--ff-secondary);
+}
+
+/* @media (min-width: 600px) {
   .hero {
     display: grid;
     width: min-content;
     margin: 0 auto;
     grid-column-gap: 1em;
-    grid-template-areas: "img title" "img subtitle";
     grid-template-columns: min-content max-content;
   }
-  .hero__image {
-    grid-area: img;
-    min-width: 250px;
-  }
-/* 
-  .section__prevtitle, .section__title--hero {
-    grid-area: title;
-  } */
 
   .section__subtitle--hero {
 
@@ -260,9 +262,10 @@ header {
     grid-row: 3;
     text-align: right;
   }
-}
+} */
 
 /* Scroll to Top Btn */
+
 .scroll-to-top {
   position: fixed;
   bottom: 3em;
@@ -282,6 +285,18 @@ header {
 
 .fa-arrow-up {
   color: var(--color-light);
+}
+
+/* About */
+.about__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
+
+.about__body {
+  margin-left: 1em;
 }
 
 /* Tech */
@@ -326,9 +341,9 @@ header {
   margin: 2em 1em;
   height: fit-content;
   padding: 2em;
-  max-width: 600px;
+  max-width: 400px;
   display: grid;
-  grid-template-columns: min-content, max-content;
+  grid-template-columns: 1fr;
 }
 
 .projects__card img {
@@ -345,14 +360,8 @@ header {
   z-index: 500;
   justify-self: center;
   align-self: center;
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h3);
   font-family: var(--ff-secondary);
-
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 500; */
 }
 
 .projects-tech {
@@ -384,7 +393,6 @@ header {
 
 .projects-links__item {
   font-size: var(--fs-body);
-  border: 1px solid var(--color-light);
   border-radius: 3px;
   padding: 7px;
   padding-left: 20px;
@@ -392,15 +400,20 @@ header {
   margin: .35em;
   color: var(--color-dark-tint);
   box-shadow: 0 2px 5px rgba(255 255 255 / 0.3);
-  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   font-weight: 600;
   text-decoration: none;
-}
-
-.projects-links__item:hover {
   border: 1px solid var(--color-light);
   background: var(--color-dark-tint);
   color: var(--color-light);
+}
+
+.projects-links__item:hover {
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  font-weight: 600;
+  border: 1px solid var(--color-light);
+  color: var(--color-dark-tint);
+
+
   /* background: linear-gradient(321deg, rgba(239,4,80,1) 0%, rgba(213,47,154,0.8762692577030813) 19%, rgba(200,69,191,1) 34%, rgba(192,105,230,0.8678658963585434) 52%, rgba(158,195,241,1) 69%, rgba(183,211,238,1) 83%, rgba(255,213,201,0.8370535714285714) 99%); */
 }
 
@@ -426,11 +439,50 @@ header {
 
 .fa-github, .fa-linkedin-in {
   color: var(--color-light);
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .contact__links {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
+  display: inline;
+}
+
+.contact__email {
+  font-size: var(--fs-h3);
+}
+
+.fa-github:hover, .fa-linkedin-in:hover, .contact__links:hover {
+  background-image: linear-gradient(90deg, #e3ffe7, #d9e7ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+}
+
+.footer__title {
+  margin-bottom: 0px;
+}
+
+.footer__subtitle  {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--color-light);
+  font-weight: 600;
+}
+
+.footer a:hover {
+  background-image: linear-gradient(90deg, #e3ffe7, #d9e7ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
