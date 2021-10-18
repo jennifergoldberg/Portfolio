@@ -287,6 +287,10 @@ header {
   color: var(--color-light);
 }
 
+.scroll-to-top :hover {
+  cursor: pointer;
+}
+
 /* About */
 .about__container {
   display: flex;

@@ -24,7 +24,6 @@ const scrollTopBtn = document.querySelector('.scroll-to-top');
 const rootElement = document.documentElement;
 
 function callback(entries, observer) {
-  console.log(observer);
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       scrollTopBtn.classList.add('show-btn');
@@ -37,7 +36,6 @@ function callback(entries, observer) {
 function scrollToTop() {
   rootElement.scrollTo({
     top: 0,
-    behavior: "smooth"
   });
 }
 
