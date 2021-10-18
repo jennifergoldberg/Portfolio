@@ -296,12 +296,23 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .about__body {
   margin-left: 1em;
 }
+
+@media (max-width: 600px) {
+  .about__container {
+    flex-wrap: wrap;
+  }
+
+  .about__body {
+    margin: auto;
+  }
+}
+
 
 /* Tech */
 .tech-list {
@@ -325,7 +336,6 @@ header {
 
 .tech-list__item:hover {
   background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-  /* background: linear-gradient(321deg, rgba(239,4,80,1) 0%, rgba(213,47,154,0.8762692577030813) 19%, rgba(200,69,191,1) 34%, rgba(192,105,230,0.8678658963585434) 52%, rgba(158,195,241,1) 69%, rgba(183,211,238,1) 83%, rgba(255,213,201,0.8370535714285714) 99%); */
   font-weight: 500;
   color: var(--color-dark);
 }
